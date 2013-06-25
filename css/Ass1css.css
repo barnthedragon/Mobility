@@ -1,13 +1,16 @@
 /* CSS3 code for Calculator app.
 Bond Uni, Mobility, Assignment 1
 by Barney St George
+June 2013
 */
 html
 {
 	/* Set a standard font size. */
 	font-size=16;
 }
-body {
+
+body 
+{
 	/* Change the standard font size to 10 pixels to make em calculations easier. */
 	font-size:62.5%;
 	min-width: 300px;
@@ -16,6 +19,7 @@ body {
 	padding: 1em;
 
 }
+
 /*My HTC Explorer is 320x480 pixels*/
 @media screen and (max-width: 480px) 
 {
@@ -24,19 +28,21 @@ body {
 	{
 		padding: 0.3em;
 	}
+	
 	/* Make the buttons a bit narrower. */
 	.letterButton, 
 	.digitButton,
 	.mathButton,
 	.otherButton
 	{
-	padding-left: 0.1em;
-	padding-right: 0.1em;
+		padding-left: 0.1em;
+		padding-right: 0.1em;
 	}
+	
 	#Display
 	{
 		position:relative;
-	left: -0.3em;
+		left: -0.3em;
 	}
 
 }
@@ -50,6 +56,7 @@ section
 	border-radius:1em;
 	background-color:#E03AAB;
 }
+
 /* Each row of buttons is within a div. */
 div
 {
@@ -66,6 +73,7 @@ as the equals extends down from the div above. */
 	top: -4.4em;
 	max-width:54.5%;
 }
+
 /* Formatting for the buttons with help from a number of websites
 including http://www.cssbuttongenerator.com/ */
 .letterButton, 
@@ -98,8 +106,9 @@ including http://www.cssbuttongenerator.com/ */
 .mathButton,
 .otherButton
 {
-		width: 17%;
+	width: 17%;
 }
+
 /* Set larger variable width on bottom row buttons
 as earlier we reduced the last row in width. */
 #zeroButton,
@@ -108,6 +117,7 @@ as earlier we reduced the last row in width. */
 {
 	width: 30.5%;
 }
+
 /* Set larger variable width
 and larger height on equals button. */
 #equalButton
@@ -115,7 +125,6 @@ and larger height on equals button. */
 	width: 35%;
 	height: 3.2em;
 }
-
 
 /* Display must vary in width
 and should always display 10 digits if required
@@ -135,6 +144,8 @@ and should not extend outside the calculator body (article). */
 	box-shadow:inset 1px 1px 2px 2px #ffffff;
 	width: 55%;
 	min-width: 5.5em;
+	white-space: nowrap;
+	overflow: hidden;
 }
 
 /* Move button slightly when user clicks on it. */
