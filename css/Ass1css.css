@@ -144,8 +144,7 @@ and should not extend outside the calculator body (article). */
 	box-shadow:inset 1px 1px 2px 2px #ffffff;
 	width: 55%;
 	min-width: 5.5em;
-	white-space: nowrap;
-	overflow: hidden;
+	maxlength: 10;
 }
 
 /* Move button slightly when user clicks on it. */
