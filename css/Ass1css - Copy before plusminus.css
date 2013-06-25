@@ -1,0 +1,168 @@
+/* CSS3 code for Calculator app.
+Bond Uni, Mobility, Assignment 1
+by Barney St George
+*/
+html
+{
+	/* Set a standard font size. */
+	font-size=16;
+}
+body {
+	/* Change the standard font size to 10 pixels to make em calculations easier. */
+	font-size:62.5%;
+	min-width: 300px;
+	max-width: 720px;
+	margin: 0 auto;
+	padding: 1em;
+
+}
+/*My HTC Explorer is 320x480 pixels*/
+@media screen and (max-width: 480px) 
+{
+	/* Make the calculator closer to the edge of the screen. */
+	body 
+	{
+		padding: 0.3em;
+	}
+	/* Make the buttons a bit narrower. */
+	.letterButton, 
+	.digitButton,
+	.mathButton,
+	#zeroButton, 
+	#equalButton,
+	#pointButton
+	{
+	padding-left: 0.1em;
+	padding-right: 0.1em;
+	}
+	#Display
+	{
+		position:relative;
+	left: -0.3em;
+	}
+
+}
+
+/* Put the whole calculator within a section. */
+section
+{
+	border:0.2em solid #000000;
+	-moz-border-radius:1.53m;
+	-webkit-border-radius:1.5em;
+	border-radius:1em;
+	background-color:#E03AAB;
+}
+/* Each row of buttons is within a div. */
+div
+{
+	margin-top: 1em;
+	margin-bottom: 1em;
+	margin-left: 1em;
+}
+
+/* The last row of buttons is smaller and adjusted up
+as the equals extends down from the div above. */
+#lastrow
+{
+	position:relative;
+	top: -4.4em;
+	max-width:54.5%;
+}
+/* Formatting for the buttons with help from a number of websites
+including http://www.cssbuttongenerator.com/ */
+.letterButton, 
+.digitButton,
+.mathButton,
+#zeroButton, 
+#equalButton,
+#pointButton
+{
+	-moz-border-radius:0.3em;
+	-webkit-border-radius:0.3em;
+	border-radius:0.3em;
+	background-color:#ededed;
+	font-size:2.4em;
+	vertical-align:top;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ededed), color-stop(1, #dfdfdf) );
+	background:-moz-linear-gradient( center top, #ededed 5%, #dfdfdf 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#dfdfdf');
+	color:#666666;
+	font-weight:bold;
+	text-shadow:1px 1px 0px #ffffff;
+	-moz-box-shadow:inset 1px 1px 2px 2px #ffffff;
+	-webkit-box-shadow:inset 1px 1px 2px 2px #ffffff;
+	box-shadow:inset 1px 1px 2px 2px #ffffff;
+	display:inline-block;
+	font-family:arial;
+	text-decoration:none
+}
+/* Set variable width on most buttons and the memory buttons. */
+.digitButton, 
+.letterButton,
+.mathButton
+{
+		width: 17%;
+}
+/* Set larger variable width on zero button.
+Remember that earlier we reduced the last row in width. */
+#zeroButton
+{
+	width: 62.5%;
+}
+/* Set larger variable width
+and larger height on equals button. */
+#equalButton
+{
+	width: 35%;
+	height: 3.2em;
+}
+/* The point button is a bit wider as the last row was reduced in width. */
+#pointButton
+{
+	width: 30%;
+}
+/* Display must vary in width
+and should always display 10 digits if required
+and should not extend outside the calculator body (article). */
+#Display
+{
+	text-align: right;
+    padding: 0.3em 6% 0.3em 0.1em;
+	margin-top: 1em;
+	margin-bottom: 0.4em;
+	margin-left: 14%;
+	margin-right:2%;
+	font-size:3.5em;
+	border-radius: 0.3em;
+	-moz-box-shadow:inset 1px 1px 2px 2px #ffffff;
+	-webkit-box-shadow:inset 1px 1px 2px 2px #ffffff;
+	box-shadow:inset 1px 1px 2px 2px #ffffff;
+	width: 55%;
+	min-width: 5.5em;
+}
+
+/* Move button slightly when user clicks on it. */
+.letterButton:active, 
+.digitButton:active,
+.mathButton:active,
+#zeroButton:active, 
+#equalButton:active 
+{
+	position:relative;
+	top:1px;
+}
+/* Light up button when mouse moves over. */
+.letterButton:hover, 
+.digitButton:hover,
+.mathButton:hover,
+#zeroButton:hover, 
+#equalButton:hover,
+#pointButton:hover
+{
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #dfdfdf), color-stop(1, #ffffff) );
+	background:-moz-linear-gradient( center top, #dfdfdf 5%, #ffffff 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#dfdfdf', endColorstr='#ffffff');
+	background-color:#dfdfdf;
+}
+
+
